@@ -21,6 +21,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("com.codeborne:selenide:7.18.2")
     testImplementation("org.slf4j:slf4j-simple:2.0.16")
+    testImplementation("org.testng:testng:7.1.0")
+    testImplementation("org.testng:testng:7.1.0")
 }
 
 tasks.test {
