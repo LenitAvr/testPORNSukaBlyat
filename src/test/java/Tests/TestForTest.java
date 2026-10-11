@@ -39,7 +39,7 @@ public class TestForTest {
         $("#subjectsInput").setValue("History").pressEnter();
         $("#hobbies-checkbox-1").click();
         $("#hobbies-checkbox-2").click();
-        $("#uploadPicture").uploadFile(new File("C:\\Users\\Lenit\\Desktop\\Gubki-dlya-stanochnykh-tiskov-GT150.png"));
+        $("#uploadPicture").uploadFromClasspath("Gubki-dlya-stanochnykh-tiskov-GT150.png");
         $("#currentAddress").setValue("Улица Крутых чуваков, дом Пивного повелителя, 4 лестница, 666 этаж, квартира Любителей пива");
         $("#state").click();
         $(byText("Haryana")).click();
