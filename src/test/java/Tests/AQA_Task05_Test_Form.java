@@ -4,15 +4,13 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class TestForTest {
+public class AQA_Task05_Test_Form {
 
     @BeforeAll
     public static void beforeAll() {
@@ -21,8 +19,8 @@ public class TestForTest {
     }
 
     @Test
-    public void Perni() throws InterruptedException {
-//        out.println("Проверка");
+    public void chekFormRegistration() throws InterruptedException {
+
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Practice Form"));
         $("#firstName").setValue("Penis");
