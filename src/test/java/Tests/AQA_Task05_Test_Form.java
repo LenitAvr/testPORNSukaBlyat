@@ -1,39 +1,23 @@
 package Tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
-
-public class AQA_Task05_Test_Form {
-
-    @BeforeAll
-    public static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-    }
+public class AQA_Task05_Test_Form extends TestBase{
 
     @Test
     public void chekFormRegistration() throws InterruptedException {
 
-        open("/automation-practice-form");
-        $(".practice-form-wrapper").shouldHave(text("Practice Form"));
-        $("#firstName").setValue("Penis");
-        $("#lastName").setValue("Fufelschmertz");
-        $("#userEmail").setValue("FufelschmertzPakastinCorp@fufel.utkanos.com");
-        $("#gender-radio-2").click();
-        $("#userNumber").setValue("88005553535");
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").click();
-        $("[value=\"1998\"]").click();
-        $(".react-datepicker__month-select").click();
-        $("[value=\"8\"]").click();
-        $(".react-datepicker__day--003").click();
+        registrationPage.openPage()
+        .setFirstName("Blya")
+        .setFirstName("Penisonius")
+        .setLastName("Fufelschmertz")
+        .setEmail("FufelschmertzPakastinCorp@fufel.utkanos.com")
+        .setGender("Male")
+        .setNumber("88005553535")
+        .setBirthDate("03", "September", "1999");
+
         $("#subjectsInput").setValue("History").pressEnter();
         $("#hobbies-checkbox-1").click();
         $("#hobbies-checkbox-2").click();
@@ -44,7 +28,6 @@ public class AQA_Task05_Test_Form {
         $("#city").click();
         $(byText("Karnal")).click();
         $("#submit").click();
-
 
     }
 

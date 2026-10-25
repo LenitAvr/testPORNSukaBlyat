@@ -2,7 +2,8 @@ package Tests;
 
 import com.codeborne.selenide.DragAndDropOptions;
 import com.codeborne.selenide.Selenide;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+//import org.junit.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
